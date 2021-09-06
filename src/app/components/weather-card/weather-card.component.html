@@ -10,7 +10,7 @@
         </ul>
         <form [formGroup]="inputForm">
             <div class="input-wrapper">
-                <input type="number" formControlName="tempInput" class="form-control" />
+                <input autofocus type="number" formControlName="tempInput" class="form-control" />
                 <button type="submit" (click)="emitAddTemp()" class="btn btn-primary add-button"
                     style="margin-left: 3px;">Add</button>
             </div>

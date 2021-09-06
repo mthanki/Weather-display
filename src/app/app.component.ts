@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
     this.dailyWeather$.next(this.dailyWeather);
   }
 
-  weatherByTemps(object) {
+  weatherByTemps(index, object) {
     return object?.temps[object?.temps?.length - 1];
   }
 }
