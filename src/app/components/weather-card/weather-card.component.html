@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{day.date | date:'mediumDate'}}</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> Lowest: {{day.temps | showMin | number:'1.0-2'}}&#176;
+            </li>
+            <li class="list-group-item">Highest: {{day.temps | showMax | number:'1.0-2'}}&#176;</li>
+            <li class="list-group-item">Mean: {{day.temps | showMean | number:'1.0-2'}}&#176;</li>
+            <li class="list-group-item">Mode: {{day.temps | showMode | number:'1.0-2'}}&#176;</li>
+        </ul>
+        <form [formGroup]="inputForm">
+            <div class="input-wrapper">
+                <input type="number" formControlName="tempInput" class="form-control" />
+                <button type="submit" (click)="emitAddTemp()" class="btn btn-primary add-button"
+                    style="margin-left: 3px;">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
