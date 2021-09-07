@@ -1,7 +1,6 @@
 <div>
   <h1 class="h1 header">Toronto Weather Data</h1>
   <section class="wrapper">
-    <!-- <img class="card-img-top" src="https://picsum.photos/300/150" alt="" width="18rem"> -->
     <app-weather-card *ngFor="let day of dailyWeather$ | async; index as i; trackBy:weatherByTemps" [day]="day"
       (addTemp)="addTemp($event, i)"></app-weather-card>
   </section>

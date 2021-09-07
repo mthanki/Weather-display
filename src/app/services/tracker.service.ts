@@ -15,8 +15,4 @@ export class TrackerService {
     return this.dataService.get(`forecast?id=${this.cityId}&units=metric`, {});
   }
 
-  showMin() {
-
-  }
-
 }
